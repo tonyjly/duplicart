@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { Keyboard, KeyboardAvoidingView, StyleSheet, Text, View, TextInput, Platform, TouchableOpacity } from 'react-native';
+import { Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, View, TextInput, Platform, TouchableOpacity } from 'react-native';
 import Item from './components/Item';
 
 export default function App() {
@@ -21,6 +21,7 @@ export default function App() {
   }
 
   return (
+    <ScrollView>
     <View style={styles.container}>
       {/* Shopping List */}
       <View style={styles.listWrapper}>
@@ -37,11 +38,8 @@ export default function App() {
               )
             })
           }
-
         </View>
-
       </View>
-
 
       {/* Create a new item */}
       <KeyboardAvoidingView
@@ -57,6 +55,7 @@ export default function App() {
         </TouchableOpacity>
       </KeyboardAvoidingView>
     </View>
+    </ScrollView>
   );
 }
 
@@ -94,17 +93,14 @@ const styles = StyleSheet.create({
     width: 250,
   },
   addWrapper: {
-    width: 60,
-    height: 60,
+    width: 48,
+    height: 48,
     backgroundColor: '#FFF',
     borderRadius: 60,
     justifyContent: 'center',
     alignItems: 'center',
     borderColor: '#C0C0C0',
     borderWidth: 1,
-
   },
-  addText: {
-
-  },
+  addText: {},
 });

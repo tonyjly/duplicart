@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 const Item = ({ text }) => {
 
@@ -12,7 +12,7 @@ const Item = ({ text }) => {
       <View style={styles.circular}></View>
     </View>
   )
-}
+};
 
 const styles = StyleSheet.create({
   item: {
